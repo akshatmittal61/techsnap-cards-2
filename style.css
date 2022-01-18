@@ -667,6 +667,101 @@ button {
       .main-right, .main-left {
         width: 100%; } }
 
+.hero {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--back-shadow);
+  position: relative;
+  margin: 2.5rem 0; }
+  .hero::after {
+    position: absolute;
+    content: "Get Personalized Recommendations by taking this test";
+    top: calc(100% - 2rem);
+    width: 45%;
+    height: 4rem;
+    left: 0;
+    background-color: #ffc700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding: 0 2rem;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%); }
+    @media (max-width: 880px) {
+      .hero::after {
+        width: 70%; } }
+    @media (max-width: 672px) {
+      .hero::after {
+        width: 85%; } }
+  @media (max-width: 672px) {
+    .hero {
+      flex-flow: column-reverse; } }
+  .hero > * {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .hero-content {
+    width: 60%;
+    flex-flow: column;
+    padding: 0 2rem 0 4rem; }
+    @media (max-width: 672px) {
+      .hero-content {
+        width: 100%;
+        height: 60%;
+        padding: 0 1rem 0 2rem; } }
+    .hero-content > * {
+      width: 100%; }
+    .hero-content__top {
+      height: 30%;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      font-weight: 700;
+      padding: 0 5% 0 0; }
+      @media (max-width: 672px) {
+        .hero-content__top {
+          padding: 0 2.5% 0 0;
+          height: 40%; } }
+    .hero-content__mid {
+      height: 40%;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      color: #0500ff;
+      padding: 0 25% 0 0; }
+      @media (max-width: 672px) {
+        .hero-content__mid {
+          padding: 0 10% 0 0;
+          height: 30%; } }
+    .hero-content__bottom {
+      height: 15%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      @media (max-width: 672px) {
+        .hero-content__bottom {
+          height: 5%; } }
+      .hero-content__bottom span {
+        font-size: 1.2rem; }
+        .hero-content__bottom span:nth-child(2n) {
+          padding: 0 1rem 0 0;
+          color: var(--primary); }
+        .hero-content__bottom span:nth-child(2n-1) {
+          padding: 0 0.5rem 0 0; }
+  .hero-image {
+    width: 40%; }
+    @media (max-width: 672px) {
+      .hero-image {
+        width: 100%;
+        height: 40%; } }
+    .hero-image__img {
+      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%; }
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

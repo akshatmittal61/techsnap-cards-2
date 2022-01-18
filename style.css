@@ -774,6 +774,9 @@ button {
   border-radius: 8px;
   overflow: hidden;
   border: 4px solid var(--back-shadow); }
+  @media (max-width: 880px) {
+    .card {
+      height: 40rem; } }
   .card::before {
     position: absolute;
     content: attr(data-price);
@@ -825,6 +828,9 @@ button {
       justify-content: flex-start;
       align-items: center;
       padding: 0 1rem 0 0; }
+      @media (max-width: 880px) {
+        .card-details > * {
+          padding: 0 0.5rem 0 0; } }
       .card-details > * span:first-child {
         width: 1.5rem;
         height: 1rem;

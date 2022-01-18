@@ -850,13 +850,13 @@ button {
     flex-flow: column;
     justify-content: center;
     align-items: flex-start; }
-    .card-prerequisites__head {
+    .card-prerequisites > span {
       color: #0500ff; }
-    .card-prerequisites__body {
+    .card-prerequisites > div {
       padding: 0.5rem 0;
       display: flex;
       flex-wrap: wrap; }
-      .card-prerequisites__body a {
+      .card-prerequisites > div a {
         margin: 0.25rem;
         padding: 0.35rem 0.8rem;
         border-radius: 500px;
@@ -866,7 +866,7 @@ button {
         outline: none;
         font-size: 0.8rem;
         transition: all var(--transition-time) ease-in-out; }
-        .card-prerequisites__body a:hover {
+        .card-prerequisites > div a:hover {
           background-color: var(--indigo-400);
           border: 2px solid var(--indigo-400);
           color: #f0f0f0; }

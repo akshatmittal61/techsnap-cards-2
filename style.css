@@ -877,6 +877,98 @@ button {
     justify-content: center;
     align-items: center; }
 
+.content-top {
+  margin: 2rem 0 0 0; }
+  .content-top-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-flow: column; }
+    .content-top-1 span:first-child {
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2rem; }
+    @media (max-width: 672px) {
+      .content-top-1 {
+        width: 75%; } }
+  @media (max-width: 672px) {
+    .content-top > * > * > * {
+      margin: 1rem 0; } }
+
+.main-search {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .main-search form {
+    position: relative; }
+    .main-search form input {
+      padding: 1rem 1rem 1rem 3rem;
+      margin: 0; }
+    .main-search form::before {
+      content: attr(data-icon);
+      position: absolute;
+      z-index: 2;
+      font-family: "Material Icons";
+      top: 50%;
+      left: 1.25rem;
+      font-size: 1rem;
+      width: 1rem;
+      height: 1rem;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+.main .buttons {
+  width: 90%;
+  margin: 0 auto;
+  display: flex; }
+  @media (max-width: 672px) {
+    .main .buttons {
+      width: 75%; } }
+  .main .buttons .icon-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    transition: all var(--transition-time) ease-in-out; }
+    .main .buttons .icon-btn:hover {
+      background-color: rgba(255, 255, 255, 0.8); }
+    body.dark .main .buttons .icon-btn {
+      background-color: rgba(0, 0, 0, 0.75); }
+    .main .buttons .icon-btn-active,
+    body.dark .main .buttons .icon-btn-active {
+      background-color: var(--indigo);
+      color: #f0f0f0; }
+      .main .buttons .icon-btn-active:hover,
+      body.dark .main .buttons .icon-btn-active:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #121212; }
+
+.main-foot {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0; }
+  .main-foot-top {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main-foot-top-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

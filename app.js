@@ -18,6 +18,7 @@ const projects = [
 const noProjects = Array(3).fill(null);
 const project = projects[0];
 const populars = document.querySelector(".popular-body .row");
+const alls = document.querySelector(".all-body .row");
 noProjects.forEach((p) => {
 	const Project = document.createElement("div");
 	Project.className = "col-lg-33 col-md-50 col-sm-100";
@@ -132,6 +133,8 @@ noProjects.forEach((p) => {
 	card.appendChild(cardFoot);
 	Project.appendChild(card);
 	populars.appendChild(Project);
+	alls.appendChild(Project.cloneNode(true));
+	alls.appendChild(Project.cloneNode(true));
 });
 
 const footerLinks = document.querySelectorAll(".footer-body-right-group__link");

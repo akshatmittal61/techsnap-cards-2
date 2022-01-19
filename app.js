@@ -80,7 +80,7 @@ noProjects.forEach((p) => {
 	cardDetails.appendChild(cardDetailsLevel);
 	cardDetails.appendChild(cardDetailsCost);
 
-	const cardAuthor = document.createElement("card-author");
+	const cardAuthor = document.createElement("div");
 	cardAuthor.className = "card-author";
 	cardAuthor.innerHTML = "Author: ";
 	const cardAuthorLink = document.createElement("a");

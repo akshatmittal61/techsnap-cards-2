@@ -1,0 +1,145 @@
+.cards {
+	width: 100%;
+	margin: 2rem 0;
+}
+.card {
+	width: 90%;
+	height: 35rem;
+	margin: 1rem 0;
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 4px solid var(--back-shadow);
+	@include respond(tab){
+		height: 40rem;
+	}
+	&::before {
+		position: absolute;
+		content: attr(data-price);
+		top: 1rem;
+		left: 1rem;
+		border-radius: 5px;
+		background-color: var(--bgcolor);
+		padding: 0.25rem 0.4rem;
+	}
+	&-head {
+		width: 100%;
+		height: 35%;
+		background-image: url(./images/2.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&-body {
+		width: 100%;
+		height: 50%;
+		padding: 0 0.25rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: column;
+		& > * {
+			width: 100%;
+			padding: 0.5rem;
+		}
+	}
+	&-title {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-flow: column;
+		& span {
+			&:first-child {
+				font-size: 0.875rem;
+				color: var(--primary);
+			}
+			&:last-child {
+				font-size: 1.25rem;
+				line-height: 1.5rem;
+				font-weight: 700;
+			}
+		}
+	}
+	&-content {
+		font-size: 0.9rem;
+	}
+	&-details {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		& > * {
+			height: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0 1rem 0 0;
+			@include respond(tab){
+				padding: 0 0.5rem 0 0;
+			}
+			& span {
+				&:first-child {
+					width: 1.5rem;
+					height: 1rem;
+					font-size: 1.25rem;
+				}
+			}
+		}
+	}
+	&-author {
+		height: 2rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 0.5rem 1rem;
+		& a {
+			margin: 0 0.75rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+		& img {
+			object-fit: contain;
+			max-width: 100%;
+			height: 1.5rem;
+		}
+	}
+	&-prerequisites {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: flex-start;
+		& > span {
+			color: #0500ff;
+		}
+		& > div {
+			padding: 0.5rem 0;
+			display: flex;
+			flex-wrap: wrap;
+			& a {
+				margin: 0.25rem;
+				padding: 0.35rem 0.8rem;
+				border-radius: 500px;
+				background-color: var(--indigo-100);
+				color: $tcolor;
+				border: 2px solid var(--indigo-400);
+				outline: none;
+				font-size: 0.8rem;
+				transition: all var(--transition-time) ease-in-out;
+				&:hover {
+					background-color: var(--indigo-400);
+					border: 2px solid var(--indigo-400);
+					color: $bgcolor;
+				}
+			}
+		}
+	}
+	&-foot {
+		width: 100%;
+		height: 15%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

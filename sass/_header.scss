@@ -1,0 +1,98 @@
+.header {
+	width: 100%;
+	height: $head-height;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid var(--back-shadow-light);
+	box-shadow: none;
+	background-color: var(--bgcolor);
+	z-index: 10;
+	&-logo {
+		width: 20%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		@include respond(tab) {
+			width: 30%;
+		}
+		@include respond(phone) {
+			width: 40%;
+		}
+		&-link {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&-content,
+		&-image {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&-image {
+			width: 40%;
+		}
+		&-content {
+			width: 60%;
+			height: 60%;
+			flex-flow: column;
+			padding: 0 0.3rem;
+		}
+		&__img {
+			object-fit: cover;
+			max-width: 85%;
+			max-height: 85%;
+			border-radius: 5px;
+		}
+		&-content > * {
+			width: 100%;
+			height: 50%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			white-space: nowrap;
+		}
+		&-content__subtitle {
+			font-size: 0.875rem;
+		}
+	}
+	&-nav {
+		width: 60%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include respond(tab) {
+			width: 0;
+			display: none;
+		}
+		&-ul {
+			width: 90%;
+			height: 100%;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			list-style: none;
+			padding: 0 1rem;
+		}
+		&-li {
+			padding: 0.25rem;
+		}
+	}
+	&-buttons {
+		width: 20%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		@include respond(tab) {
+			width: 40%;
+		}
+		@include respond(phone) {
+			width: 50%;
+		}
+	}
+}

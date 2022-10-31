@@ -1,0 +1,92 @@
+button {
+	background: inherit;
+	color: inherit;
+	border: none;
+	outline: none;
+	font: inherit;
+	text-decoration: inherit;
+	text-transform: inherit;
+	text-shadow: inherit;
+	text-rendering: inherit;
+	text-size-adjust: inherit;
+	text-indent: inherit;
+	text-align: inherit;
+	appearance: inherit;
+	cursor: pointer;
+	&:hover,
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		border: none;
+		outline: none;
+	}
+}
+$outline: 0.15rem;
+$border: 0.125rem;
+$border-width: 0.35rem;
+.btn {
+	margin: 0.25rem 0.5rem;
+	padding: 0.75rem 1.375rem;
+	outline: $outline solid transparent;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: 550;
+	letter-spacing: 0.05rem;
+	cursor: pointer;
+	user-select: none;
+	line-height: 1.5;
+	transition: all var(--transition-time) ease-in-out;
+	background-color: var(--back-shadow-light);
+	color: var(--bgcolor);
+	&:hover {
+		background-color: var(--back-shadow);
+		outline: $outline solid transparent;
+		color: var(--tcolor);
+	}
+	&:active,
+	&:focus,
+	&:focus-visible,
+	&:focus-within {
+		background-color: var(--back-shadow-dark);
+		outline: $outline solid transparent;
+	}
+	@include respond(phone) {
+		padding: 0.6rem 0.75rem;
+	}
+	&-sm {
+		font-size: 0.875rem;
+		padding: 0.6rem 1rem;
+		font-weight: 400;
+	}
+	&-lg {
+		font-size: 1.125rem;
+		padding: 1rem 1.6rem;
+		font-weight: 550;
+	}
+	&-primary {
+		background-color: var(--primary);
+		outline: $outline solid var(--primary);
+		&:hover {
+			background-color: var(--primary-100);
+			outline: $outline solid var(--primary);
+			background-color: transparent;
+		}
+		&:active,
+		&:focus {
+			background-color: var(--primary-400);
+			outline: $outline solid var(--primary);
+		}
+	}
+	&-outline {
+		background-color: transparent;
+		color: var(--tcolor);
+		&:hover {
+			background-color: var(--primary);
+			color: var(--bgcolor);
+		}
+	}
+}
